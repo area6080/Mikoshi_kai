@@ -34,23 +34,22 @@ class Public::UsersController < ApplicationController
   end
 
   private
-  
-  def update_user_params
-    params.require(:user).permit(:name, :introduction, :profile_image)
-  end
-
-  def is_matching_login_user
-    @user = User.find(params[:id])
-    unless @user.id == current_user.id
-      redirect_to user_path(current_user)
+    def update_user_params
+      params.require(:user).permit(:name, :introduction, :profile_image)
     end
-  end
-  # 他人のユーザー編集画面に入るのを無効化
 
-  def ensure_guest_user
-    @user = User.find(params[:id])
-    if @user.guest_user?
-      redirect_to user_path(current_user), notice: "ゲストユーザーはプロフィール編集は行えません。"
+    def is_matching_login_user
+      @user = User.find(params[:id])
+      unless @user.id == current_user.id
+        redirect_to user_path(current_user)
+      end
     end
-  end
+    # 他人のユーザー編集画面に入るのを無効化
+
+    def ensure_guest_user
+      @user = User.find(params[:id])
+      if @user.guest_user?
+        redirect_to user_path(current_user), notice: "ゲストユーザーはプロフィール編集は行えません。"
+      end
+    end
 end
