@@ -15,14 +15,22 @@ footer {
 
 .main-visual {
   width: 80%;
-  height: 750px;
+  height: 400px;
   background-image: url('main_v.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.link-btn {
+  position: absolute;
+  bottom: 30px;
 }
 
 .second-visual {
   width: 70%;
-  height: 600px;
+  height: 400px;
   background-image: url('second_v.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -36,13 +44,6 @@ footer {
 
 .admin-image{
   margin-left: 30px;
-}
-
-.heading-style{
-  margin-top: 150px;
-  margin-left: 30px;
-  color: white;
-  text-align: center;
 }
 
 .map-btn{
