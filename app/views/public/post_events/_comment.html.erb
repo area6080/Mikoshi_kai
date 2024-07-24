@@ -10,14 +10,14 @@
       <p>コメント件数：<%= post_event.post_comments.count %></p>
     </div>
   </div>
-  
+
   <div class="row matsuri-style overflow-auto mt-4" style="width:900px; height:400px;">
     <div class="col">
       <% post_event.post_comments.reverse_each do |post_comment| %>
       <!--reverse_eachにより新しい順に表示-->
         <div class="row" style="height:80px;">
           <div class="col-md-10 col-sm-11 offset-1 comment-box my-2 py-1 top-line">
-            <%= post_comment.comment %>
+            <%= post_comment.hidden_comment %>
           </div>
           <div class="col-md-3 offset-6 comment-box d-flex justify-content-end">
             <%= image_tag post_comment.user.get_profile_image(30,30), class: "rounded-circle" %>

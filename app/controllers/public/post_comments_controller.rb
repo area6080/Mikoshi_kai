@@ -8,6 +8,7 @@ class Public::PostCommentsController < ApplicationController
     post_event = PostEvent.find(params[:post_event_id])
     comment = current_user.post_comments.new(post_comment_params)
     comment.post_event_id = post_event.id
+    comment.score = Language.get_data(post_comment_params[:comment])
     return redirect_to post_event_path(post_event), notice: "コメントを投稿しました！" if comment.save
     redirect_to request.referer
   end
@@ -19,7 +20,7 @@ class Public::PostCommentsController < ApplicationController
 
   private
     def post_comment_params
-      params.require(:post_comment).permit(:comment)
+      params.require(:post_comment).permit(:comment, :score)
     end
 
     def is_matching_login_user
