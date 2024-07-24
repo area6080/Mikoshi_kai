@@ -1,7 +1,6 @@
-
 <div class="container">
   <div class="row d-flex justify-content-center">
-    <div class="col-6 border border-light mt-5">
+    <div class="col-md-6 col-sm-12 border border-light mt-5">
       <h5 class="text-center p-4 mb-0">ユーザー編集</h5>
       <div class="form-body p-4">
         
@@ -13,7 +12,7 @@
               <%= image_tag "no_image.jpg", size: "150x150" %>
             <% end %>
           </div>
-          <%= f.file_field :profile_image, accept: "image/*", class: "ml-5 mt-1" %>
+          <%= f.file_field :profile_image, accept: "image/*", class: "mt-1" %>
           
           <div class="input-group mb-3 mt-4">
             <div class="input-group-prepend">

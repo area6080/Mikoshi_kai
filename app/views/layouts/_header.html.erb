@@ -1,13 +1,11 @@
 <header class="sticky-top matsuri-style">
-  <nav class="">
+  <nav>
     <div class="container-fluid">
       <div class="row">
-        
         <div class="col-lg-3 col-sm-6 col-es-12 d-flex justify-content-center">
           <a class="navbar-brand ml-3" href="/"><%= image_tag('logo-j.jpg', size: "200x70") %></a>
         </div>
-        
-        <div class="col-lg-1 col-sm-6 col-es-12 d-flex justify-content-end">
+        <div class="col-lg-2 col-sm-6 col-es-12 d-flex justify-content-end">
           <div class="my-auto">
             <% if admin_signed_in? %>
               <%= image_tag('fire.jpg', size: "50x50", class: "rounded-circle") %>
@@ -18,8 +16,7 @@
             <% end %>
           </div>
         </div>
-        
-        <div class="col-lg-5 col-sm-6 col-es-12 mt-4">
+        <div class="col-lg-4 col-sm-6 col-es-12 mt-4">
             <ul class="nav d-flex justify-content-center">
               <% if admin_signed_in? %>
                 <%= render 'layouts/admin_header' %>
@@ -30,12 +27,9 @@
               <% end %>
             </ul>
         </div>
-        
         <div class="col-lg-3 col-sm-6 col-es-12 d-flex justify-content-end mt-4">
           <%= render 'searches/search' %>
         </div>
-
-
       </div>
     </div>
   </nav>
