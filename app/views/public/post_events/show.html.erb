@@ -1,64 +1,51 @@
 <div class="container">
   <div class="row d-flex justify-content-center">
-    <div class="col-10">
+    <div class="col-md-10 col-sm-12">
       <div class="row mt-5">
-        <div class="col-4">
+        <div class="col-md-4 col-sm-12">
           <div class="row d-flex justify-content-center">
             <%= image_tag @post_event.get_image(250,250), class: "rounded-lg" %>
           </div>
-          <div class="row d-flex justify-content-around mt-3">
-            <% @post_event.tags.first(3).each do |tag| %>
-              <div class="badge badge-secondary"><%= tag.name %></div>
-            <% end %>
-          </div>
+          <!--<div class="row d-flex justify-content-around mt-3">-->
+          <!--  % @post_event.tags.first(3).each do |tag| %>-->
+          <!--    <div class="badge badge-secondary">%= tag.name %></div>-->
+          <!--  % end %>-->
+          <!--</div>-->
         </div>
-        <div class="col-7 offset-1">
-          <div class="row">
+        <div class="col-md-7 col-sm-11 offset-1">
+          <div class="row mt-2">
             <h3><strong><%= @post_event.title %></strong></h3>
           </div>
           <div class="row mt-1">
             <h5><%= @post_event.event_date %></h5>
           </div>
-          <div class="row">
-            <table class="table table-borderless matsuri-style">
-              <thead>
-                <tr>
-                  <th class="col-3"></th>
-                  <th class="col-9"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>開催場所</td>
-                  <td><%= @post_event.address %></td>
-                </tr>
-                <tr>
-                  <td>説明</td>
-                  <td><%= @post_event.caption %></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="row mt-1">
+            <%= @post_event.address %>
           </div>
-          <div class="row">
+          <div class="row mt-2">
+            <%= @post_event.caption %>
+          </div>
+          <div class="row d-flex justify-content-center mt-2">
             <div class="col-2">
-              <%= image_tag @post_event.user.get_profile_image(70,70), class: "rounded-circle" %>
+              <%= image_tag @post_event.user.get_profile_image(50,50), class: "rounded-circle" %>
             </div>
             <div class="col-4 d-flex align-items-center pl-0">
               <%= link_to user_path(@post_event.user.id), class: "matsuri-style" do %>
-                <strong><i class="fa-regular fa-user"></i><span> <%= @post_event.user.name %></span></strong>
+                <strong><i class="fa-solid fa-circle-user"></i><span> <%= @post_event.user.name %></span></strong>
               <% end %>
             </div>
           </div>
         </div>
       </div>
+      
       <div class="row mt-5">
-        <div class="col-5">
+        <div class="col-md-4 col-sm-11 ml-1">
           <%= render 'favorite-btn', post_event: @post_event %>
         </div>
-        <div class="col-5">
+        <div class="col-md-5 col-sm-12 ml-1 mt-1">
           <%= render 'join-btn', post_event: @post_event %>
         </div>
-        <div class="col-2">
+        <div class="col-md-2 col-sm-12 mt-1">
           <% if @post_event.user == current_user %>
             <%= link_to "編集", edit_post_event_path(@post_event),class: "btn btn-success" %>
             <%= link_to "削除", post_event_path(@post_event), method: :delete, class: "btn btn-danger", "data-confirm" => "削除してよろしいですか?" %>
