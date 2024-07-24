@@ -19,8 +19,9 @@
   height: calc(100vh - 180px);
 }
 
-#back {
+#scrolltop {
   position: fixed;
   right: 20px;
   bottom: 50px;
+  z-index: 9;
 }

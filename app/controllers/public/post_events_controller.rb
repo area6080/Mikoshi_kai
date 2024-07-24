@@ -32,7 +32,7 @@ class Public::PostEventsController < ApplicationController
     @post_event.user_id = current_user.id
 
     if @post_event.save
-      @post_event.create_tags
+      # @post_event.create_tags
       flash[:notice] = "イベントを投稿しました!"
       redirect_to post_event_path(@post_event.id)
     else
