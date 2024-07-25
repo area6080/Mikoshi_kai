@@ -1,4 +1,5 @@
 # 神輿會
+#### イベント（お祭り）の情報を共有できるコミュニティサイト
 ![神輿會](https://github.com/area6080/Mikoshi_kai/blob/feature-readme/app/assets/images/githubtop.png)
 
 <p align="center">
@@ -6,11 +7,8 @@
     <img src="https://skillicons.dev/icons?i=ruby,rails,html,css,aws,js," />
   </a>
 </p>
-## サイト概要
-#### サイトテーマ
-###### イベント（お祭り）の情報を共有できるコミュニティサイト
 
-#### テーマを選んだ理由
+### サイト概要
 私は色々と新しいことに挑戦してみたい性格から多趣味なのですが、その中でも一番新しい趣味の一つに  
 祭りで神輿を担ぐ、というものがあります。  
 以前より興味はあったものの参加方法がわからず、今は前職の先輩に紹介していただき参加しています。  
