@@ -1,5 +1,11 @@
-![神輿會](https://github.com/area6080/Mikoshi_kai/blob/main/app/assets/images/logo.png)
 # 神輿會
+![神輿會](https://github.com/area6080/Mikoshi_kai/blob/feature-readme/app/assets/images/githubtop.png)
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=ruby,rails,html,css,aws,js," />
+  </a>
+</p>
 ## サイト概要
 #### サイトテーマ
 ###### イベント（お祭り）の情報を共有できるコミュニティサイト
