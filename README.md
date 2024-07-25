@@ -34,6 +34,12 @@
 ## URL
 **http://mikoshi-majesty.com/**
 
+### 主要機能
+* Gem deviseを利用したメールアドレス、パスワードによるログイン機能
+* GoogleMap APIを利用した地図を用いたイベントの表示
+* イベントの投稿、編集、削除機能
+* 
+
 ## 開発環境
 * OS：Linux(Amazon Linux 2023)
 * 言語：HTML,CSS,JavaScript,Ruby,SQL
