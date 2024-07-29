@@ -33,6 +33,7 @@
 
 ## URL
 **http://mikoshi-majesty.com/**
+ゲストログイン機能を実装していますので、登録なしでPFをご確認いただけます。
 
 ### 主要機能
 * Gem deviseを利用したメールアドレス、パスワードによるログイン機能
@@ -52,7 +53,8 @@
 ![ER図](https://github.com/area6080/Mikoshi_kai/blob/feature-readme/app/assets/images/ER_view.jpg)
 ### 使用技術
 * Ruby 3.1.2 / Rails 6.1.7
-* テストツール RSpec / コード修正ツール Rubocop
+* テストツール RSpec
+* コード修正ツール Rubocop
 * CI/CD： GitHub Actions
 * インフラ： AWS(EC2,RDS MySQL,) / NGINX / PUMA
 
