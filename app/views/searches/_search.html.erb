@@ -3,7 +3,7 @@
   <div class="input-group">
     <%= f.select :model, options_for_select([['User'], ['Event']]), {}, class: "form-control" %>
     <%= f.text_field :word, placeholder: "Search", required: true, style: "width:140px" %>
-    <%= button_tag type: "submit", class: "btn btn-outline-primary btn-sm" do %>
+    <%= button_tag type: "submit", class: "btn btn-primary btn-sm" do %>
       <i class="fa-solid fa-magnifying-glass"></i>
     <% end %>
   </div>
