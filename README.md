@@ -53,7 +53,8 @@
 ### ER図
 ![ER図](https://github.com/area6080/Mikoshi_kai/blob/feature-readme/app/assets/images/ER_view.jpg)
 ### 使用技術
-* Ruby 3.1.2 / Rails 6.1.7
+* フロントエンド　 HTML/CSS /　　Javascript
+*　　バックエンド Ruby 3.1.2 / Rails 6.1.7
 * テストツール RSpec
 * コード修正ツール Rubocop
 * CI/CD： GitHub Actions
