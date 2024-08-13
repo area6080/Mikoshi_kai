@@ -46,19 +46,19 @@
 
 ## 開発環境
 * OS：Linux(Amazon Linux 2023)
-* 言語：HTML,CSS,JavaScript,Ruby,SQL
+* 言語：HTML ,CSS ,JavaScript ,Ruby ,SQL
 * フレームワーク：Ruby on Rails
 * JSライブラリ：jQuery
 * IDE：Cloud9
 ### ER図
 ![ER図](https://github.com/area6080/Mikoshi_kai/blob/feature-readme/app/assets/images/ER_view.jpg)
 ### 使用技術
-* フロントエンド　 HTML/CSS /　　Javascript
-*　　バックエンド Ruby 3.1.2 / Rails 6.1.7
-* テストツール RSpec
-* コード修正ツール Rubocop
-* CI/CD： GitHub Actions
-* インフラ： AWS(EC2,RDS MySQL,) / NGINX / PUMA
+* フロントエンド：　HTML/CSS　,Javascript
+* バックエンド：　Ruby 3.1.2　,Rails 6.1.7　
+* テストツール：　RSpec
+* コード修正ツール：　Rubocop
+* CI/CD：　GitHub Actions
+* インフラ：　AWS(EC2,RDS MySQL,) ,NGINX ,PUMA
 
 
 ## 使用素材
