@@ -42,15 +42,20 @@
             </a>
           </div>
           <div id="sp-menu">
-        <div class="justify-content-center">
-          <a class="" href="/"><%= image_tag('logo-j.jpg', size: "200x70") %></a>
-        </div>
+            <div class="justify-content-center">
+              <%= image_tag('logo-j.jpg', size: "200x70") %>
+            </div>
             <ul>
-              <li><a href="#">MENU1</a></li>
-              <li><a href="#">MENU2</a></li>
-              <li><a href="#">MENU3</a></li>
-              <li><a href="#">MENU4</a></li>
-              <li><a href="#">MENU5</a></li>
+              <li class="nav-item mt-1 mr-1">
+                <%= link_to 'TOPに戻る', root_path, class: 'nav-link btn btn-primary btn-sm' %>
+              </li>
+              <% if admin_signed_in? %>
+                <%= render 'layouts/admin_header' %>
+              <% elsif user_signed_in? %>
+                <%= render 'layouts/user_header' %>
+              <% else %>
+                <%= render 'layouts/before_signin_header' %>
+              <% end %>
             </ul>
           </div>
         </div>
