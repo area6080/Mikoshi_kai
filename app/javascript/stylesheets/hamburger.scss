@@ -20,7 +20,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #000;
+  background-color: #d7d7cb;
   border-radius: 4px;
 }
 .menu-trigger span:nth-child(1) {
@@ -32,6 +32,10 @@
 .menu-trigger span:nth-child(3) {
   bottom: 0;
 }
+.hamburger {
+    display: none;
+}
+
 .menu-trigger.active span:nth-child(1) {
   -webkit-transform: translateY(20px) rotate(-45deg);
   transform: translateY(20px) rotate(-45deg);
@@ -45,15 +49,14 @@
   transform: translateY(-20px) rotate(45deg);
   background-color: #fff;
 }
-/* ------------------------ */
-/* ------ spメニュー ------ */
-/* ------------------------ */
+
+
 #sp-menu {
   position: fixed;
   top: 0;
   left: 0;
-  background: #000;
-  color: #fff;
+  background: #282834;
+  color: #d7d7cb;
   width: 100%;
   min-height: 100%;
   display: none;
@@ -67,4 +70,18 @@
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+  .phone-menu {
+    display: block;
+    height: 70px;
+  }
+  .hamburger {
+    display: block;
+  }
+  
+  .pc-menu {
+    display: none;
+  }
 }
