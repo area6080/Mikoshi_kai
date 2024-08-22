@@ -146,7 +146,7 @@ describe "[STEP1] ユーザログイン前のテスト" do
       fill_in "user[password]", with: user.password
       click_button "Log in"
 
-      click_link "ログアウト"
+      click_link "ログアウト", match: :first
     end
 
     context "ログアウト機能のテスト" do

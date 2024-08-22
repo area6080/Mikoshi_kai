@@ -20,11 +20,11 @@ describe "[STEP2] ユーザログイン後のテスト" do
       subject { current_path }
 
       it "My Pageを押すと、自分のユーザ詳細画面に遷移する", spec_category: "ルーティング" do
-        click_link "My Page"
+        click_link "My Page", match: :first
         is_expected.to eq "/users/" + user.id.to_s
       end
       it "MAPを押すと、マップ画面に遷移する", spec_category: "ルーティング" do
-        click_link "MAP"
+        click_link "MAP", match: :first
         is_expected.to eq "/map"
       end
     end
