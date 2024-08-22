@@ -1,11 +1,11 @@
 <header class="sticky-top matsuri-style">
   <nav>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-3 col-sm-6 col-es-12 d-flex justify-content-center">
+      <div class="row pc-menu">
+        <div class="col-lg-3 d-flex justify-content-center">
           <a class="navbar-brand ml-3" href="/"><%= image_tag('logo-j.jpg', size: "200x70") %></a>
         </div>
-        <div class="col-lg-2 col-sm-6 col-es-12 d-flex justify-content-end">
+        <div class="col-lg-2 d-flex justify-content-end">
           <div class="my-auto">
             <% if admin_signed_in? %>
               <%= image_tag('fire.jpg', size: "50x50", class: "rounded-circle") %>
@@ -16,7 +16,7 @@
             <% end %>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-6 col-es-12 mt-4">
+        <div class="col-lg-4 mt-4">
             <ul class="nav d-flex justify-content-center">
               <% if admin_signed_in? %>
                 <%= render 'layouts/admin_header' %>
@@ -27,10 +27,40 @@
               <% end %>
             </ul>
         </div>
-        <div class="col-lg-3 col-sm-6 col-es-12 d-flex justify-content-end mt-4">
+        <div class="col-lg-3 d-flex justify-content-end mt-4">
           <%= render 'searches/search' %>
         </div>
       </div>
+      
+      <div class="row phone-menu">
+        <div class="hamburger">
+          <div id="hm-icon">
+            <a class="menu-trigger" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+          <div id="sp-menu">
+            <div class="justify-content-center">
+              <%= image_tag('logo-j.jpg', size: "200x70") %>
+            </div>
+            <ul>
+              <li class="nav-item mt-1 mr-1">
+                <%= link_to 'TOPに戻る', root_path, class: 'nav-link btn btn-primary btn-sm' %>
+              </li>
+              <% if admin_signed_in? %>
+                <%= render 'layouts/admin_header' %>
+              <% elsif user_signed_in? %>
+                <%= render 'layouts/user_header' %>
+              <% else %>
+                <%= render 'layouts/before_signin_header' %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </nav>
 </header>

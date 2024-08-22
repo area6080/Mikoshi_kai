@@ -1,6 +1,8 @@
+/*global $*/ 
+
 $(function() {
   $('#scrolltop a').hide();
-  $(window).scroll(function () {
+  $(window).scroll(function() {
      if ($(this).scrollTop() > 100) {
           $('#scrolltop a').fadeIn();
      } else {
@@ -14,3 +16,19 @@ $(function() {
     event.preventDefault();
   });
 });
+
+$(function() {
+  $('.menu-trigger').on('click', function(event) {
+    $(this).toggleClass('active');
+    $('#sp-menu').fadeToggle();
+    event.preventDefault();
+  });
+});
+// document.addEventListener('turbolinks:load', function() {
+//   $('.menu-trigger').on('click', function(event) {
+//     $(this).toggleClass('active');
+//     $('#sp-menu').fadeToggle();
+//     event.preventDefault();
+//   });
+// });
+
